@@ -336,8 +336,8 @@ class ADefAttack(Attack):
             # the vector field is always applied to the original image,
             # since the current vector field is added to all prior
             # vector fields via vec_field_target += vec_field_full
-            perturbed = _compose(image_original.copy(),
-                                           vec_field_min, color_axis)
+            perturbed = _compose(image_original.copy(), vec_field_min,
+                                 color_axis)
 
             vec_field_full = vec_field_min
             norm_full = norm_min
