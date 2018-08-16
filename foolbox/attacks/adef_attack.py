@@ -222,7 +222,7 @@ class ADefAttack(Attack):
         (default is smooth = 0 for no smoothing).
     targeting : bool
         targeting = False (default) to stop as soon as model misclassifies
-        input targeting = True to stop only once a candidate label is achieved.
+        input. targeting = True to stop only once a candidate label is achieved.
 
     """
 
