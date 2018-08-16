@@ -242,11 +242,11 @@ class ADefAttack(Attack):
         # multiple targets and once we have a criterion for this, we could
         # easily incorporate this case here. ADef targets classes according
         # to their prediction score. That means that the correct label will
-        # have the index = 0. For an untargeted attack, the label with the 
+        # have the index = 0. For an untargeted attack, the label with the
         # second highest probability will be targeted. For a targeted attack,
         # it is necessary to find the probability of this class and pass
         # this index as the candidate (not the actual target).
-        if targeted == False:
+        if targeted is False:
             ind_of_candidates = 1
         else:
             pred, _ = a.predictions(perturbed)
@@ -350,7 +350,6 @@ class ADefAttack(Attack):
 
             # getting the current label after applying the vector field
             fx, _ = a.predictions(perturbed)
-            #fx = np.expand_dims(fx, axis=0)
             current_label = np.argmax(fx)
             fx = fx - fx[current_label]
 
