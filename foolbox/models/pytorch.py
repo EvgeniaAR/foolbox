@@ -210,7 +210,7 @@ class PyTorchModel(DifferentiableModel):
             images.requires_grad_()
         predictions = self._model(images)
 
-        print(predictions.size())
+        #print(predictions.size())
         predictions = predictions[0]
 
         assert gradient.dim() == 1
