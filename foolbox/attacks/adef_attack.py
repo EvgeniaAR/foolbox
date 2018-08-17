@@ -254,7 +254,7 @@ class ADefAttack(Attack):
             # choose the top-k classes
             logging.info('Only testing the top-{} classes'.format(subsample))
             assert isinstance(subsample, int)
-            ind_of_candidates = np.arange(1,subsample)
+            ind_of_candidates = np.arange(1, subsample)
         else:
             pred, _ = a.predictions(perturbed)
             pred_sorted = (-pred).argsort()
